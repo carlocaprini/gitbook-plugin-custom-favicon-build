@@ -1,28 +1,31 @@
-# gitbook-plugin-custom-favicon
+# gitbook-plugin-custom-favicon-build
+
 Add your own favicon to gitbook themes.
 
-Plugin deletes the gitbook favicon located at `"_book/gitbook/images/favicon.ico"` and replaces with your favicon.
+Depending on the command used for building your gitbook, this plugin will:
 
-There is probably a better way to do this, but this at least works for _most_ use cases.  However, this is a hack :smiley:
+* delete the gitbook favicon located at `"_book/gitbook/images/favicon.ico"` and replace it with your own when you are *serving* the gitbook (e.g.`gitbook serve .`);
+* delete the gitbook favicon located at `"{targetFolder}/gitbook/images/favicon.ico"` and replace it with your own when you are *building* the gitbook (e.g.`gitbook build . {targetFolder}`).
 
 ## Install via gitbook
 
 ### In book.json
 
-* Add `custom-favicon` to your `plugins` array
-* Add path to your favicon in `favicon` under `pluginsConfig`
+* Add `custom-favicon-build` to your `plugins` array
+* Add path to your favicon in `custom-favicon-build.favicon` under `pluginsConfig`:
 
-#### book.json
 ```json
 {
-	"plugins" : ["custom-favicon"],
+	"plugins" : ["custom-favicon-build"],
 	"pluginsConfig" : {
-		"favicon": "path/to/favicon.ico"
+		"custom-favicon-build": {
+			"favicon": "path/to/favicon.ico"
+		}
 	}
 }
 ```
 
-### using gitbook-cli
+### Using gitbook-cli
 
 ```bash
 gitbook install
@@ -30,8 +33,9 @@ gitbook install
 
 ### Using NPM
 ```bash
-npm install gitbook-plugin-custom-favicon
+npm install gitbook-plugin-custom-favicon-build
 ```
 
+## Note
 
-
+This is a [fork](https://github.com/Bandwidth/gitbook-plugin-custom-favicon).
