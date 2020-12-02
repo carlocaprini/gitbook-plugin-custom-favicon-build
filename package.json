@@ -13,5 +13,11 @@
   },
   "author": "Carlo Caprini",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "gitbook",
+    "plugin",
+    "custom-favicon-build",
+    "favicon"
+  ]
 }
