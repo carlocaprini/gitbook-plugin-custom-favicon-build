@@ -4,8 +4,8 @@ Add your own favicon to gitbook themes.
 
 Depending on the command used for building your gitbook, this plugin will:
 
-* delete the gitbook favicon located at `"_book/gitbook/images/favicon.ico"` and replace it with your own when you are *serving* the gitbook (e.g.`gitbook serve .`);
-* delete the gitbook favicon located at `"{targetFolder}/gitbook/images/favicon.ico"` and replace it with your own when you are *building* the gitbook (e.g.`gitbook build . {targetFolder}`).
+* delete the gitbook favicon located at `_book/gitbook/images/favicon.ico` and replace it with your own when you are *serving* the gitbook (e.g.`gitbook serve .`);
+* delete the gitbook favicon located at `{targetFolder}/gitbook/images/favicon.ico` and replace it with your own when you are *building* the gitbook (e.g.`gitbook build . {targetFolder}`: the command `gitbook build . public` will apply the favicon update to `public/gitbook/images/favicon.ico`).
 
 ## Install via gitbook
 
